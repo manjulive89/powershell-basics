@@ -1,3 +1,5 @@
+#!/usr/bin/env pwsh
+
 # This file contains a basic structure for a PowerShell application.
 
 param(
