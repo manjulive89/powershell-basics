@@ -26,3 +26,9 @@ finally {
     Pop-Location
 }
 ```
+
+## Static Method of .NET Type
+
+```powershell
+[string]::IsNullOrWhiteSpace($someString)
+```
