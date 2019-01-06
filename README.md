@@ -53,6 +53,18 @@ finally {
 }
 ```
 
+## File Reading and Writing
+
+```powershell
+# Reading
+$contents = Get-Content $sourceFile -Encoding 'utf8'
+```
+
+```powershell
+# Writing
+$someString | Out-File $destFile -Encoding 'utf8'
+```
+
 ## Static Method of .NET Type
 
 ```powershell
