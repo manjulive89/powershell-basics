@@ -46,3 +46,9 @@ Import-Module "$PSScriptRoot/MyModule.psm1" -DisableNameChecking
 ```powershell
 Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' 'ProgramFilesDir'
 ```
+
+## PowerShell Version
+
+```powershell
+$PSVersionTable.PSVersion
+```
