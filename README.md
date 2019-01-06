@@ -15,6 +15,15 @@ param(
 )
 ```
 
+## Multi-line Strings
+
+```powershell
+$str = @"
+This string
+is multi-line.
+"@
+```
+
 ## Change Working Directory
 
 ```powershell
