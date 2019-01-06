@@ -32,3 +32,11 @@ finally {
 ```powershell
 [string]::IsNullOrWhiteSpace($someString)
 ```
+
+## Module Loading
+
+**Note:** When using modules, you should also use `Unload-Modules.ps1` from this repository.
+
+```powershell
+Import-Module "$PSScriptRoot/MyModule.psm1" -DisableNameChecking
+```
