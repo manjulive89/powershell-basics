@@ -40,3 +40,9 @@ finally {
 ```powershell
 Import-Module "$PSScriptRoot/MyModule.psm1" -DisableNameChecking
 ```
+
+## Read Registry Value
+
+```powershell
+Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' 'ProgramFilesDir'
+```
