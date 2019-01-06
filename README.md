@@ -85,6 +85,10 @@ Import-Module "$PSScriptRoot/MyModule.psm1" -DisableNameChecking
 Get-ItemPropertyValue 'HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion' 'ProgramFilesDir'
 ```
 
+## Approved Verbs
+
+<https://docs.microsoft.com/en-us/powershell/developer/cmdlet/approved-verbs-for-windows-powershell-commands>
+
 ## PowerShell Version
 
 ```powershell
