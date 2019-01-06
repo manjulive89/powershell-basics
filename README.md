@@ -15,6 +15,23 @@ param(
 )
 ```
 
+## Basic Objects
+
+```powershell
+$list = @(
+    'item1'
+    'item2'
+)
+```
+
+```powershell
+$obj = @{
+    Property1 = 'one'
+    Property2 = 'two'
+    Property3 = 'three'
+}
+```
+
 ## Multi-line Strings
 
 ```powershell
