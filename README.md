@@ -32,13 +32,40 @@ $obj = @{
 }
 ```
 
+## String Interpolation
+
+```powershell
+$x = "Some $my_var here" # simple
+$y = "The length is: $($my_str.Length)" # expression
+$z = "Variable with non-standard characters: ${env:PROGRAM_FILES(x86)}" # special
+```
+
+## Variables with Non-Standard Characters
+
+```powershell
+${,,,} = 5 # Variable named ,,,
+```
+
 ## Multi-line Strings
 
 ```powershell
-$str = @"
+$str1 = @"
 This string
 is multi-line.
 "@
+
+$str2 = @'
+This string
+is multi-line.
+'@
+```
+
+## Number + KB, MB, GB, TB or PB
+
+Powershell understands standard notation for kilobytes, megabytes, gigabytes, terabytes and even petabytes.
+
+```powershell
+1KB, 1MB, 1GB, 1TB, 1PB
 ```
 
 ## Change Working Directory
@@ -63,6 +90,24 @@ $contents = Get-Content $sourceFile -Encoding 'utf8'
 ```powershell
 # Writing
 $someString | Out-File $destFile -Encoding 'utf8'
+```
+
+## Not
+
+You can use `-Not` or simply `!`.
+
+```powershell
+if (!$a) {
+    Write-Host '$a is null'
+}
+```
+
+## Block Comment
+
+```powershell
+<#This is
+a commented
+block#>
 ```
 
 ## Static Method of .NET Type
