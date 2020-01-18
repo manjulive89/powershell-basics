@@ -32,6 +32,12 @@ $obj = @{
 }
 ```
 
+### 1-Element List
+
+```powershell
+$list = @(, $onlyItem)
+```
+
 ## String Interpolation
 
 ```powershell
@@ -89,7 +95,8 @@ $contents = Get-Content $sourceFile -Encoding 'utf8'
 
 ```powershell
 # Writing
-$someString | Out-File $destFile -Encoding 'utf8'
+# WARN: BOM with PowerShell 5; no BOM with PowerShell Core
+$someString | Out-File $destFile -Encoding 'utf8' -NoNewLine
 ```
 
 ## Not
@@ -114,6 +121,12 @@ block#>
 
 ```powershell
 [string]::IsNullOrWhiteSpace($someString)
+```
+
+## Create .NET Type
+
+```powershell
+[System.Drawing.SolidBrush]::new($theColor)
 ```
 
 ## Module Loading
